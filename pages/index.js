@@ -46,7 +46,7 @@ export async function getStaticProps() {
       })),
     },
     // Revalidate set time when page is reloaded from server side
-    revalidate: 10,
+    revalidate: 1,
   };
 }
 

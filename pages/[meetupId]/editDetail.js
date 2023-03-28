@@ -22,11 +22,11 @@ function editDetail(props) {
       },
     });
 
-    // if (!response.ok) {
-    //   const text = await response.text();
-    //   console.error("Error response:", text);
-    //   throw new Error("Failed to update meetup");
-    // }
+    if (!response.ok) {
+      const text = await response.text();
+      console.error("Error response:", text);
+      throw new Error("Failed to update meetup");
+    }
 
     const res = await response.json();
 
