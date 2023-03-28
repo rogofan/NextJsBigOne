@@ -48,7 +48,7 @@ export async function getStaticPaths() {
   client.close();
   return {
     //Fallback defines way, which is IDs preloaded from BE
-    fallback: false,
+    fallback: "blocking",
     paths: meetups.map((meetup) => ({
       params: { meetupId: meetup._id.toString() },
     })),
